@@ -1,0 +1,13 @@
+-d Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\gwsynthesis\picotiny.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst Q:\picorv32_soc\TangNano-9K-example\picotiny\project\picotiny.cst
+-cfg Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\pnr\device.cfg
+-sdc Q:\picorv32_soc\TangNano-9K-example\picotiny\project\picotiny.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23

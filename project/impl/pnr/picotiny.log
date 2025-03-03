@@ -1,7 +1,7 @@
-Reading netlist file: "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\gwsynthesis\picotiny.vg"
-Parsing netlist file "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\gwsynthesis\picotiny.vg" completed
+Reading netlist file: "Q:\gr_picorv32_soc\project\impl\gwsynthesis\picotiny.vg"
+Parsing netlist file "Q:\gr_picorv32_soc\project\impl\gwsynthesis\picotiny.vg" completed
 Processing netlist completed
-Reading constraint file: "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\picotiny.cst"
+Reading constraint file: "Q:\gr_picorv32_soc\project\picorv32_soc_top.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -20,10 +20,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\pnr\picotiny.power.html" completed
-Generate file "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\pnr\picotiny.pin.html" completed
-Generate file "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\pnr\picotiny.rpt.html" completed
-Generate file "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\pnr\picotiny.rpt.txt" completed
-Generate file "Q:\picorv32_soc\TangNano-9K-example\picotiny\project\impl\pnr\picotiny.tr.html" completed
-Sun Mar 02 01:23:18 2025
+Generate file "Q:\gr_picorv32_soc\project\impl\pnr\picotiny.power.html" completed
+Generate file "Q:\gr_picorv32_soc\project\impl\pnr\picotiny.pin.html" completed
+Generate file "Q:\gr_picorv32_soc\project\impl\pnr\picotiny.rpt.html" completed
+Generate file "Q:\gr_picorv32_soc\project\impl\pnr\picotiny.rpt.txt" completed
+Generate file "Q:\gr_picorv32_soc\project\impl\pnr\picotiny.tr.html" completed
+Tue Mar 04 00:44:55 2025
 

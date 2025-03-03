@@ -2,91 +2,123 @@
  "Device" : "GW1NR-9C",
  "Files" : [
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_defines.vh",
+   "Path" : "Q:/gr_picorv32_soc/gowin_ip/bootram_2kx8_0/bootram_2kx8_0.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_enc.v",
+   "Path" : "Q:/gr_picorv32_soc/gowin_ip/bootram_2kx8_1/bootram_2kx8_1.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v",
+   "Path" : "Q:/gr_picorv32_soc/gowin_ip/bootram_2kx8_2/bootram_2kx8_2.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_openldi.v",
+   "Path" : "Q:/gr_picorv32_soc/gowin_ip/bootram_2kx8_3/bootram_2kx8_3.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_tcard.v",
+   "Path" : "Q:/gr_picorv32_soc/gowin_ip/gowin_clkdiv/gowin_clkdiv.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_term.v",
+   "Path" : "Q:/gr_picorv32_soc/gowin_ip/gowin_rpll/gowin_rpll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_tmds.v",
+   "Path" : "Q:/gr_picorv32_soc/gowin_ip/sram_2kx8/sram_2kx8.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_utils.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/core/picorv32.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_vdma.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_defines.vh",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_enc.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picoperipheral.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picorv32.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_openldi.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_tcard.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/simpleuart.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_term.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/spimemio_puya.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_tmds.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/gowin_ip/bootram_2kx8_0/bootram_2kx8_0.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_utils.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/gowin_ip/bootram_2kx8_1/bootram_2kx8_1.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/hdmi/svo_vdma.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/gowin_ip/bootram_2kx8_2/bootram_2kx8_2.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/memories/picomemory.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/gowin_ip/bootram_2kx8_3/bootram_2kx8_3.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/peripherals/PicoCounter.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/gowin_ip/gowin_clkdiv/gowin_clkdiv.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/peripherals/PicoGPIO.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/gowin_ip/gowin_rpll/gowin_rpll.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/peripherals/PicoMux_4_1.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/gowin_ip/sram_2kx8/sram_2kx8.v",
+   "Path" : "Q:/gr_picorv32_soc/hw/peripherals/PicoResetSync.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/peripherals/PicoSPI_Flash.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/peripherals/PicoUART.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/picorv32_soc.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/picorv32_soc_top.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/simpleuart.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/spimemio_puya.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/led_mux/led_mux.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Q:/gr_picorv32_soc/hw/led_mux/PicoLedMux.sv",
    "Type" : "verilog"
   }
  ],
@@ -94,8 +126,8 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "Q:/picorv32_soc/TangNano-9K-example/picotiny/project/impl/temp/rtl_parser.result",
- "Top" : "picotiny",
- "VerilogStd" : "verilog_2001",
+ "ResultFile" : "Q:/gr_picorv32_soc/project/impl/temp/rtl_parser.result",
+ "Top" : "picorv32_soc_top",
+ "VerilogStd" : "sysv",
  "VhdlStd" : "vhdl_93"
 }

@@ -67,7 +67,7 @@ LOAD c:/8.2.0-2.1-20190425-1021/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32i/ilp3
                 0x0000000000000000                . = ALIGN (0x4)
  *crt.o(.text)
 
-.text           0x0000000000000000      0x1b0
+.text           0x0000000000000000      0x3fc
                 0x0000000000000000                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000000000000      0x130 build/crt_flash.o
@@ -75,39 +75,40 @@ LOAD c:/8.2.0-2.1-20190425-1021/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32i/ilp3
                 0x0000000000000010                trap_entry
  *(.text*)
  .text.startup.main
-                0x0000000000000130       0x7c build/firmware.o
+                0x0000000000000130      0x288 build/firmware.o
                 0x0000000000000130                main
  .text.irqCallback
-                0x00000000000001ac        0x4 build/firmware.o
-                0x00000000000001ac                irqCallback
+                0x00000000000003b8        0x4 build/firmware.o
+                0x00000000000003b8                irqCallback
  *(.rodata)
  *(.rodata*)
+ .rodata.main   0x00000000000003bc       0x40 build/firmware.o
  *(.srodata)
  *(.srodata*)
  *(.eh_frame_hdr)
  *(.eh_frame)
-                0x00000000000001b0                . = ALIGN (0x4)
-                0x00000000000001b0                _etext = .
-                0x00000000000001b0                _sidata = _etext
+                0x00000000000003fc                . = ALIGN (0x4)
+                0x00000000000003fc                _etext = .
+                0x00000000000003fc                _sidata = _etext
 
-.rela.dyn       0x00000000000001b0        0x0
- .rela.text     0x00000000000001b0        0x0 build/firmware.o
+.rela.dyn       0x00000000000003fc        0x0
+ .rela.text     0x00000000000003fc        0x0 build/firmware.o
 
 .rodata
  *(.rdata)
  *(.rodata .rodata.*)
  *(.gnu.linkonce.r.*)
 
-.ctors          0x00000000000001b0        0x0
-                0x00000000000001b0                . = ALIGN (0x4)
-                0x00000000000001b0                _ctors_start = .
+.ctors          0x00000000000003fc        0x0
+                0x00000000000003fc                . = ALIGN (0x4)
+                0x00000000000003fc                _ctors_start = .
  *(.init_array*)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x00000000000001b0                . = ALIGN (0x4)
-                0x00000000000001b0                _ctors_end = .
+                0x00000000000003fc                . = ALIGN (0x4)
+                0x00000000000003fc                _ctors_end = .
 
-.data           0x0000000040000000        0x0 load address 0x00000000000001b0
+.data           0x0000000040000000        0x0 load address 0x00000000000003fc
                 0x0000000040000000                . = ALIGN (0x4)
                 0x0000000040000000                _sdata = .
                 0x0000000040000000                _ram_start = .
@@ -154,16 +155,16 @@ LOAD c:/8.2.0-2.1-20190425-1021/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32i/ilp3
                 0x0000000040000400                PROVIDE (_stack_start = .)
 OUTPUT(build/fw-flash.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x13a3
- .debug_info    0x0000000000000000     0x137d build/firmware.o
- .debug_info    0x000000000000137d       0x26 build/crt_flash.o
+.debug_info     0x0000000000000000     0x1304
+ .debug_info    0x0000000000000000     0x12de build/firmware.o
+ .debug_info    0x00000000000012de       0x26 build/crt_flash.o
 
-.debug_abbrev   0x0000000000000000      0x412
- .debug_abbrev  0x0000000000000000      0x3fe build/firmware.o
- .debug_abbrev  0x00000000000003fe       0x14 build/crt_flash.o
+.debug_abbrev   0x0000000000000000      0x42e
+ .debug_abbrev  0x0000000000000000      0x41a build/firmware.o
+ .debug_abbrev  0x000000000000041a       0x14 build/crt_flash.o
 
-.debug_loc      0x0000000000000000     0x2dc5
- .debug_loc     0x0000000000000000     0x2dc5 build/firmware.o
+.debug_loc      0x0000000000000000     0x2ff4
+ .debug_loc     0x0000000000000000     0x2ff4 build/firmware.o
 
 .debug_aranges  0x0000000000000000       0xb8
  .debug_aranges
@@ -171,18 +172,17 @@ OUTPUT(build/fw-flash.elf elf32-littleriscv)
  .debug_aranges
                 0x0000000000000098       0x20 build/crt_flash.o
 
-.debug_ranges   0x0000000000000000      0xd30
- .debug_ranges  0x0000000000000000      0xd30 build/firmware.o
+.debug_ranges   0x0000000000000000      0xd08
+ .debug_ranges  0x0000000000000000      0xd08 build/firmware.o
 
-.debug_line     0x0000000000000000     0x4a59
- .debug_line    0x0000000000000000     0x4881 build/firmware.o
- .debug_line    0x0000000000004881      0x1d8 build/crt_flash.o
+.debug_line     0x0000000000000000     0x4cba
+ .debug_line    0x0000000000000000     0x4ae2 build/firmware.o
+ .debug_line    0x0000000000004ae2      0x1d8 build/crt_flash.o
 
-.debug_str      0x0000000000000000      0x2ac
- .debug_str     0x0000000000000000      0x294 build/firmware.o
-                                        0x2f6 (size before relaxing)
- .debug_str     0x0000000000000294       0x18 build/crt_flash.o
-                                         0x51 (size before relaxing)
+.debug_str      0x0000000000000000      0x2c2
+ .debug_str     0x0000000000000000      0x271 build/firmware.o
+                                        0x2d3 (size before relaxing)
+ .debug_str     0x0000000000000271       0x51 build/crt_flash.o
 
 .comment        0x0000000000000000       0x39
  .comment       0x0000000000000000       0x39 build/firmware.o

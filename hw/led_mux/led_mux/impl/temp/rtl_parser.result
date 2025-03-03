@@ -1,0 +1,20 @@
+[
+ {
+  "InstFile" : "Q:/gr_picorv32_soc/hw/led_mux/PicoLedMux.sv",
+  "InstLine" : 1,
+  "InstName" : "PicoLedMux",
+  "ModuleFile" : "Q:/gr_picorv32_soc/hw/led_mux/PicoLedMux.sv",
+  "ModuleLine" : 1,
+  "ModuleName" : "PicoLedMux",
+  "SubInsts" : [
+   {
+    "InstFile" : "Q:/gr_picorv32_soc/hw/led_mux/PicoLedMux.sv",
+    "InstLine" : 15,
+    "InstName" : "u_led_mux",
+    "ModuleFile" : "Q:/gr_picorv32_soc/hw/led_mux/led_mux.sv",
+    "ModuleLine" : 1,
+    "ModuleName" : "led_mux"
+   }
+  ]
+ }
+]

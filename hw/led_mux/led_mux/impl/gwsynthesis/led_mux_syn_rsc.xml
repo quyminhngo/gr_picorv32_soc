@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="PicoLedMux" Register="64" Lut="34">
+ <SubModule name="u_led_mux" Register="16" Alu="15" Lut="18"/>
+</Module>

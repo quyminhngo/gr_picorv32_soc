@@ -16,7 +16,9 @@
  *  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
  */
-
+/*Module spimemio_puya có vai trò giao tiếp với bộ nhớ SPI Flash 
+để đọc dữ liệu. Nó nhận lệnh từ bộ xử lý (CPU), gửi lệnh đọc đến flash, 
+và nhận dữ liệu trả về */
 module spimemio_puya (
 	input clk, resetn,
 

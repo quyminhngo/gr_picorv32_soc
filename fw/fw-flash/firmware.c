@@ -13,13 +13,6 @@ typedef struct
 
 typedef struct
 {
-    volatile uint32_t OUT;
-    volatile uint32_t IN;
-    volatile uint32_t OE;
-} PICOGPIO;
-
-typedef struct
-{
     union
     {
         volatile uint32_t REG;
@@ -34,14 +27,22 @@ typedef struct
     };
 } PICOQSPI;
 
+#define io_read(base_addr, offset) (*((base_addr) + (offset)))
+#define io_write(base_addr, offset, data) (*((base_addr) + (offset)) = data)
+
 #define QSPI0 ((PICOQSPI *)0x81000000)
-#define GPIO0 ((PICOGPIO *)0x82000000)
-#define UART0 ((PICOUART *)0x83000000)
+
+/* GPIO*/
+#define GPIO_BASE_ADDR ((volatile uint32_t *)0x82000000)
+#define GPIO_OE_OFFSET 0
+#define GPIO_IE_OFFSET 1
+#define GPIO_DATA_OFFSET 2
 
 #define FLASHIO_ENTRY_ADDR ((void *)0x80000054)
-
 void (*spi_flashio)(uint8_t *pdata, int length, int wren) = FLASHIO_ENTRY_ADDR;
 
+/* UART Driver*/
+#define UART0 ((PICOUART *)0x83000000)
 int putchar(int c)
 {
     if (c == '\n')
@@ -327,7 +328,6 @@ uint32_t cmd_benchmark(bool verbose, uint32_t *instns_p)
 
     return cycles_end - cycles_begin;
 }
-
 void cmd_benchmark_all()
 {
     uint32_t instns = 0;
@@ -372,22 +372,117 @@ volatile int i;
 #define CLK_FREQ 25175000
 #define UART_BAUD 115200
 
-void main()
+// LED MUX
+#define LED_MUX_BASE ((volatile uint32_t *)0xC0000000)
+#define LED_MUX_DATA_OFFSET 0
+//   -- a --
+//  |       |
+//  f       b
+//  |       |
+//   -- g --
+//  |       |
+//  e       c  ---
+//  |       |  -d-
+//   -- d --   ---
+
+//     +----+------------------------------|------|
+//     | Số| d - a - b - c - d - e - f - g | Hex  |
+//     +----+-- -- -- -- -- -- -- -- -- -- + ---- +
+//     | 0 | 0 - 1 - 1 - 1 - 1 - 1 - 1 - 0 | 0x7E | 0
+//     | 1 | 0 - 0 - 1 - 1 - 0 - 0 - 0 - 0 | 0x30 | 1
+//     | 2 | 0 - 1 - 1 - 0 - 1 - 1 - 0 - 1 | 0x6D | 2
+//     | 3 | 0 - 1 - 1 - 1 - 1 - 0 - 0 - 1 | 0x79 | 3
+//     | 4 | 0 - 0 - 1 - 1 - 0 - 0 - 1 - 1 | 0x33 | 4
+//     | 5 | 0 - 1 - 0 - 1 - 1 - 0 - 1 - 1 | 0x5B | 5
+//     | 6 | 0 - 1 - 0 - 1 - 1 - 1 - 1 - 1 | 0x5F | 6
+//     | 7 | 0 - 1 - 1 - 1 - 0 - 0 - 0 - 0 | 0x70 | 7
+//     | 8 | 0 - 1 - 1 - 1 - 1 - 1 - 1 - 1 | 0x7F | 8
+//     | 9 | 0 - 1 - 1 - 1 - 0 - 0 - 1 - 1 | 0x7B | 9
+//     +----+-- -- -- -- -- -- -- -- -- -- + ---- +
+// 0000 1000
+//  abc defg
+// 0111 1011
+
+int main()
 {
-    UART0->CLKDIV = CLK_FREQ / UART_BAUD - 2;
+    io_write(GPIO_BASE_ADDR, GPIO_OE_OFFSET, 0x3F);
+    io_write(GPIO_BASE_ADDR, GPIO_IE_OFFSET, 0x00);
+    io_write(GPIO_BASE_ADDR, GPIO_DATA_OFFSET, 0x15);
+    io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x30337e7b);
 
-    GPIO0->OE = 0x3F;
-    GPIO0->OUT = 0x3F;
-
-    cmd_set_crm(1);
-    cmd_set_dspi(1);
+    int j = 0;
     while (1)
     {
         /* code */
-        for (int i = 0; i < 100000; i++)
-            GPIO0->OUT ^= 0x00000001;
-        for (int i = 0; i < 100000; i++)
-            GPIO0->OUT ^= 0x00000010;
+        for (int i = 0; i < 50000; i++)
+        {
+            // io_write(GPIO_BASE_ADDR, GPIO_DATA_OFFSET, 0x00);
+            switch (j)
+            {
+            case 0:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x00000030);
+                break;
+            case 1:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x00003033);
+
+                break;
+            case 2:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x0030337e);
+
+                break;
+            case 3:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x30337e7b);
+                break;
+            case 4:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x337e7b01);
+                break;
+            case 5:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x7e7b0101);
+                break;
+            case 6:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x7b010101);
+                break;
+            case 7:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x01010101);
+                break;
+            case 8:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x0101016d);
+                break;
+            case 9:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x01016d33);
+
+                break;
+            case 10:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x016d337e);
+
+                break;
+            case 11:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x6d337e7b);
+
+                break;
+            case 12:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x337e7b6d);
+
+                break;
+            case 13:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x7e7b6d7e);
+
+                break;
+            case 14:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x7b6d7e7e);
+
+                break;
+            case 15:
+                io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x6d7e7e79);
+
+                break;
+            default:
+                j = 0;
+                break;
+            }
+            // io_write(LED_MUX_BASE, LED_MUX_DATA_OFFSET, 0x30337e7b);
+        }
+        j++;
     }
 }
 

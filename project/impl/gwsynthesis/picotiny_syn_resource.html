@@ -29,7 +29,7 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <th class="label">SSRAM NUMBER</th>
 </tr>
 <tr>
-<td class="label">picotiny (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">picorv32_soc_top (Q:/gr_picorv32_soc/hw/picorv32_soc_top.sv)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -37,8 +37,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_pll
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--i4
+ (Q:/gr_picorv32_soc/hw/picorv32_soc_top.sv)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -46,8 +46,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_div_5
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_pll
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -55,8 +55,17 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_Reset_Sync
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_div_5
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_PicoResetSync
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">4</td>
 <td align = "center">4</td>
 <td align = "center">2</td>
@@ -64,17 +73,17 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_picorv32
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_picorv32
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">605</td>
 <td align = "center">314</td>
-<td align = "center">1323</td>
+<td align = "center">1261</td>
 <td align = "center">-</td>
 <td align = "center">2</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_PicoMem_SRAM_8KB_7
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_PicoMem_SRAM_8KB_7
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">1</td>
 <td align = "center">-</td>
 <td align = "center">3</td>
@@ -82,8 +91,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_3
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_3
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -91,8 +100,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_2
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_2
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -100,8 +109,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_1
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_1
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -109,8 +118,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_0
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_0
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -118,26 +127,26 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_PicoMem_Mux_1_4_8
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_PicoMux_1_4_8
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
-<td align = "center">165</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-</tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_PicoMem_Mux_1_4_picop
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-<td align = "center">3</td>
+<td align = "center">231</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_PicoMem_SPI_Flash_18
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_PicoMux_1_4_picop
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_PicoSPI_Flash_18
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">9</td>
@@ -145,26 +154,26 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_spimemio
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picoperipheral.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_spimemio
+ (Q:/gr_picorv32_soc/hw/peripherals/PicoSPI_Flash.sv)</td>
 <td align = "center">122</td>
 <td align = "center">22</td>
-<td align = "center">196</td>
+<td align = "center">185</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--xfer
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/spimemio_puya.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--xfer
+ (Q:/gr_picorv32_soc/hw/spimemio_puya.v)</td>
 <td align = "center">35</td>
 <td align = "center">-</td>
-<td align = "center">55</td>
+<td align = "center">54</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_boot_sram
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_boot_sram
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">1</td>
 <td align = "center">-</td>
 <td align = "center">2</td>
@@ -172,8 +181,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_3
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_3
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -181,8 +190,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_2
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_2
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -190,8 +199,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_1
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_1
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -199,8 +208,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_0
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picomemory.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_sram_0
+ (Q:/gr_picorv32_soc/hw/memories/picomemory.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -208,26 +217,26 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_PicoMem_GPIO
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
-<td align = "center">97</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_PicoGPIO
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
+<td align = "center">96</td>
 <td align = "center">-</td>
-<td align = "center">60</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-</tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_PicoMem_UART
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-<td align = "center">5</td>
+<td align = "center">39</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_simpleuart
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picoperipheral.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_PicoUART
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">6</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_simpleuart
+ (Q:/gr_picorv32_soc/hw/peripherals/PicoUART.sv)</td>
 <td align = "center">131</td>
 <td align = "center">124</td>
 <td align = "center">92</td>
@@ -235,8 +244,26 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_hdmi
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/picotiny.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--i5
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_led_mux
+ (Q:/gr_picorv32_soc/hw/led_mux/PicoLedMux.sv)</td>
+<td align = "center">16</td>
+<td align = "center">15</td>
+<td align = "center">21</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_hdmi
+ (Q:/gr_picorv32_soc/hw/picorv32_soc.v)</td>
 <td align = "center">8</td>
 <td align = "center">-</td>
 <td align = "center">1</td>
@@ -244,26 +271,26 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tcard
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tcard
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v)</td>
 <td align = "center">145</td>
 <td align = "center">-</td>
-<td align = "center">324</td>
+<td align = "center">318</td>
 <td align = "center">-</td>
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_term
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_term
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v)</td>
 <td align = "center">243</td>
 <td align = "center">77</td>
-<td align = "center">652</td>
+<td align = "center">618</td>
 <td align = "center">-</td>
 <td align = "center">1</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_overlay
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_overlay
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">51</td>
@@ -271,8 +298,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_buf_in
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_utils.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_buf_in
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_utils.v)</td>
 <td align = "center">24</td>
 <td align = "center">-</td>
 <td align = "center">1</td>
@@ -280,8 +307,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_axis_pipe
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_utils.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_axis_pipe
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_utils.v)</td>
 <td align = "center">48</td>
 <td align = "center">-</td>
 <td align = "center">6</td>
@@ -289,8 +316,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_buf_over
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_utils.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_buf_over
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_utils.v)</td>
 <td align = "center">3</td>
 <td align = "center">-</td>
 <td align = "center">2</td>
@@ -298,8 +325,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_axis_pipe
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_utils.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_axis_pipe
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_utils.v)</td>
 <td align = "center">8</td>
 <td align = "center">-</td>
 <td align = "center">6</td>
@@ -307,8 +334,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_buf_out
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_utils.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_buf_out
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_utils.v)</td>
 <td align = "center">24</td>
 <td align = "center">-</td>
 <td align = "center">1</td>
@@ -316,8 +343,8 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_axis_pipe
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_utils.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_axis_pipe
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_utils.v)</td>
 <td align = "center">48</td>
 <td align = "center">-</td>
 <td align = "center">28</td>
@@ -325,17 +352,17 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_enc
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_enc
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v)</td>
 <td align = "center">269</td>
 <td align = "center">6</td>
-<td align = "center">241</td>
+<td align = "center">240</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">7</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tmds_0
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tmds_0
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v)</td>
 <td align = "center">18</td>
 <td align = "center">35</td>
 <td align = "center">102</td>
@@ -343,20 +370,20 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">3</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tmds_1
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tmds_1
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v)</td>
 <td align = "center">18</td>
 <td align = "center">35</td>
-<td align = "center">101</td>
+<td align = "center">105</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">3</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tmds_2
- (Q:/picorv32_soc/TangNano-9K-example/picotiny/hw/hdmi/svo_hdmi_top.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--svo_tmds_2
+ (Q:/gr_picorv32_soc/hw/hdmi/svo_hdmi_top.v)</td>
 <td align = "center">19</td>
 <td align = "center">35</td>
-<td align = "center">101</td>
+<td align = "center">106</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">3</td>

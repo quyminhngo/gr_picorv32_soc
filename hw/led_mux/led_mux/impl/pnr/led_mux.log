@@ -1,4 +1,0 @@
-Reading netlist file: "Q:\gr_picorv32_soc\hw\led_mux\led_mux\impl\gwsynthesis\led_mux.vg"
-Parsing netlist file "Q:\gr_picorv32_soc\hw\led_mux\led_mux\impl\gwsynthesis\led_mux.vg" completed
-ERROR  (PA2024) : The number(84) of ports exceeds the resource limit 70 regular I/Os and 1 RECONFIG_N I/Os of current device.
-NOTE  (PA0005) : Processing netlist completed with errors

@@ -1,4 +1,4 @@
-# PicoTiny Example Project
+# PicoTiny Project
 
 A PicoRV32-based SoC example with HDMI terminal from SimpleVout, SPI Flash XIP from picosoc, and custom UART ISP for flash programming.
 
@@ -29,15 +29,15 @@ A PicoRV32-based SoC example with HDMI terminal from SimpleVout, SPI Flash XIP f
 
 - PicoRV32
 
-    Base RV32I config, SP set through crt.S
+  Base RV32I config, SP set through crt.S
 
 - spimemio
 
-    Added DSPI recovery and extra delay cycles for $t_{RES1} of Winbond, GigaDevice, and Puya SPI flash. QSPI function disabled as TangNano-9K only supports DSPI operation.
+  Added DSPI recovery and extra delay cycles for $t\_{RES1} of Winbond, GigaDevice, and Puya SPI flash. QSPI function disabled as TangNano-9K only supports DSPI operation.
 
 - SimpleVOut
 
-    Configured for 640x480@60 HDMI output with Gowin OSER and ELVDS macro. The module sends a terminal with testcard as the background. Characters sent from PicoRV32 to the UART will also be displayed on the terminal.
+  Configured for 640x480@60 HDMI output with Gowin OSER and ELVDS macro. The module sends a terminal with testcard as the background. Characters sent from PicoRV32 to the UART will also be displayed on the terminal.
 
 ### Address Mapping
 
@@ -56,11 +56,12 @@ A PicoRV32-based SoC example with HDMI terminal from SimpleVout, SPI Flash XIP f
 
 - python >= 3.6
 
-    Set $PYTHON_NAME to python executive if the desired python is not in the $PATH
+  Set $PYTHON_NAME to python executive if the desired python is not in the $PATH
+
 - pyserial
 - RISC-V GCC
 
-    Set $RISCV_NAME to GCC prefix and $RISCV_PATH to GCC root folder
+  Set $RISCV_NAME to GCC prefix and $RISCV_PATH to GCC root folder
 
 The variables above could be configured by setting environment variables or modifying Makefile.
 
@@ -68,15 +69,15 @@ The variables above could be configured by setting environment variables or modi
 
 - Build BROM ISP Flasher image
 
-    ```bash
-    make brom
-    ```
+  ```bash
+  make brom
+  ```
 
 - Build user firmware image
 
-    ```bash
-    make flash
-    ```
+  ```bash
+  make flash
+  ```
 
 ### Firmware ISP Program
 
@@ -84,15 +85,15 @@ The ISP firmware will wait for ISP command for <1s, then jump to main program if
 
 - Program user firmware image through ISP
 
-    ```bash
-    make program COMx=<UART port>
-    ```
+  ```bash
+  make program COMx=<UART port>
+  ```
 
 - Program custom firmware image through ISP
 
-    ```bash
-    make program PROG_FILE=<objdump Verilog file> COMx=<UART port>
-    ```
+  ```bash
+  make program PROG_FILE=<objdump Verilog file> COMx=<UART port>
+  ```
 
 ### Example Firmware
 
